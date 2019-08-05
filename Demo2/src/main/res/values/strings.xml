@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetOtherResource</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="message">这个是资源项目的专属string资源</string>
+</resources>
