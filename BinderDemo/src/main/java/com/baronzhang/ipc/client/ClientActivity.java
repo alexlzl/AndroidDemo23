@@ -4,10 +4,10 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +43,7 @@ public class ClientActivity extends AppCompatActivity {
                     return;
 
                 try {
+                    Log.e("TAG", "addBook==client"+String.valueOf(android.os.Process.myPid()));
                     Book book = new Book();
                     book.setPrice(101);
                     book.setName("编码");
@@ -71,6 +72,7 @@ public class ClientActivity extends AppCompatActivity {
             bookManager = Stub.asInterface(service);
             if (bookManager != null) {
                 try {
+                    Log.e("TAG", "getBooks==client"+String.valueOf(android.os.Process.myPid()));
                     List<Book> books = bookManager.getBooks();
                     Log.d("ClientActivity", books.toString());
                 } catch (RemoteException e) {

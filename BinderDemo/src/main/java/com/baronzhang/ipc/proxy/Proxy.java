@@ -3,6 +3,7 @@ package com.baronzhang.ipc.proxy;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.baronzhang.ipc.Book;
 import com.baronzhang.ipc.server.BookManager;
@@ -34,7 +35,7 @@ public class Proxy implements BookManager {
         Parcel data = Parcel.obtain();
         Parcel replay = Parcel.obtain();
         List<Book> result;
-
+        Log.e("TAG", "getBooks==proxy"+String.valueOf(android.os.Process.myPid()));
         try {
             data.writeInterfaceToken(DESCRIPTOR);
             remote.transact(Stub.TRANSAVTION_getBooks, data, replay, 0);
@@ -49,7 +50,7 @@ public class Proxy implements BookManager {
 
     @Override
     public void addBook(Book book) throws RemoteException {
-
+        Log.e("TAG", "addBook==proxy"+String.valueOf(android.os.Process.myPid()));
         Parcel data = Parcel.obtain();
         Parcel replay = Parcel.obtain();
 

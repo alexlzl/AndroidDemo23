@@ -21,7 +21,7 @@ public class RemoteService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        Log.e("TAG", "RemoteService"+String.valueOf(android.os.Process.myPid()));
         Book book = new Book();
         book.setName("三体");
         book.setPrice(88);
@@ -30,12 +30,14 @@ public class RemoteService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        Log.e("TAG", "onBind");
         return bookManager;
     }
 
     private final Stub bookManager = new Stub() {
         @Override
         public List<Book> getBooks() throws RemoteException {
+            Log.e("TAG", "RemoteService===getBooks"+String.valueOf(android.os.Process.myPid()));
             synchronized (this) {
                 if (books != null) {
                     return books;
@@ -46,6 +48,7 @@ public class RemoteService extends Service {
 
         @Override
         public void addBook(Book book) throws RemoteException {
+            Log.e("TAG", "RemoteService==addBook"+String.valueOf(android.os.Process.myPid()));
             synchronized (this) {
                 if (books == null) {
                     books = new ArrayList<>();
@@ -57,7 +60,7 @@ public class RemoteService extends Service {
                 book.setPrice(book.getPrice() * 2);
                 books.add(book);
 
-                Log.e("Server", "books: " + book.toString());
+                Log.e("TAG", "RemoteService==addBook: " + book.toString());
             }
         }
     };
