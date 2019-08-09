@@ -1,1 +1,1 @@
-include ':app', ':Demo1', ':Handler', ':Intent', ':Demo2', ':Demo3', ':Demo6', ':Demo7', ':Demo8', ':Demo9', ':Demo10', ':AIDL', 'Demo4', 'Demo5', 'BinderDemo', 'ServiceDemo'
+include ':app', ':Demo1', ':Handler', ':Intent', ':Demo2', ':Demo3', ':Demo6', ':Demo7', ':Demo8', ':Demo9', ':Demo10', ':AIDL', ':OnNewIntent', 'Demo4', 'Demo5', 'BinderDemo', 'ServiceDemo'

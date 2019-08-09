@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/Demo9/Demo9.iml" filepath="$PROJECT_DIR$/Demo9/Demo9.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Intent/Intent.iml" filepath="$PROJECT_DIR$/Intent/Intent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OnNewIntent/OnNewIntent.iml" filepath="$PROJECT_DIR$/OnNewIntent/OnNewIntent.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServiceDemo/ServiceDemo.iml" filepath="$PROJECT_DIR$/ServiceDemo/ServiceDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

@@ -22,6 +22,7 @@
             <option value="$PROJECT_DIR$/Demo9" />
             <option value="$PROJECT_DIR$/Handler" />
             <option value="$PROJECT_DIR$/Intent" />
+            <option value="$PROJECT_DIR$/OnNewIntent" />
             <option value="$PROJECT_DIR$/ServiceDemo" />
             <option value="$PROJECT_DIR$/app" />
           </set>

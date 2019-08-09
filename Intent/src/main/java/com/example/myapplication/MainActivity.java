@@ -21,9 +21,9 @@ MessageQueue messageQueue;
     }
 
     public void test(View view){
-       Intent intent= new Intent(this,Main3Activity.class);
+       Intent intent= new Intent(this,Main2Activity.class);
 
-       intent.putExtra("bitmap",bitmap);
+//       intent.putExtra("bitmap",bitmap);
         startActivity(intent);
     }
 }

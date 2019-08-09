@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void start(){
         Intent intent = new Intent(this, BookManagerService.class);
-        intent.setAction("com.baronzhang.ipc");
+//        intent.setAction("com.baronzhang.ipc");
         if(conn == null){
             conn = new ServiceConnection() {
                 @Override
